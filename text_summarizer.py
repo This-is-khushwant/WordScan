@@ -43,3 +43,4 @@ def summarize_text_nltk(text, num_sentences=3):
     summary = " ".join(summary_sentences)
 
     return summary
+
