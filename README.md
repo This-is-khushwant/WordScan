@@ -49,7 +49,7 @@ WordScan is a Python-based application designed to process document photos by en
    
 3. **View Results**:
 
-   The enhanced image will be saved in the `processed` directory, and the extracted text along with its summary will be displayed in the console or saved as a text file, depending on the implementation.
+   The enhanced image will be saved in the `processed` directory, and the extracted text along with its summary will be displayed in the console.
 
 ## Project Structure
 
