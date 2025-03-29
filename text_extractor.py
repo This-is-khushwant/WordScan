@@ -1,12 +1,10 @@
 import cv2
 import pytesseract
-from textblob import TextBlob
+from autocorrect import Speller
 
 def autocorrect_paragraph(text):
-    """Corrects spelling mistakes in a given paragraph."""
-    blob = TextBlob(text)  # Create a TextBlob object
-    corrected_text = blob.correct()  # Perform autocorrection
-    return str(corrected_text)  # Return the corrected paragraph
+    spell = Speller(lang="en")  # English autocorrector
+    return spell(text)
 
 def extract_text_from_image(image_path):
     """Extracts text from an image using Tesseract OCR."""
@@ -24,5 +22,3 @@ def extract_text_from_image(image_path):
     text = pytesseract.image_to_string(thresh)
     
     return autocorrect_paragraph(text) 
-
-

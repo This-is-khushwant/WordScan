@@ -57,7 +57,4 @@ def image_cleaner(image_path, processed_image_path):
     # Perform adaptive thresholding
     img_thresh_adp = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 7)
     
-    # Apply Gaussian blur to reduce noise
-    img_blurred = cv2.GaussianBlur(img_thresh_adp, (1, 1), 0)
-    
-    cv2.imwrite(processed_image_path, img_blurred)
+    cv2.imwrite(processed_image_path, img_thresh_adp)

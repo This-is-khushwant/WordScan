@@ -40,7 +40,7 @@ def summarize_text_nltk(text, num_sentences=3):
 
     # Get top N sentences
     summary_sentences = heapq.nlargest(num_sentences, sentence_scores, key=sentence_scores.get)
-    summary = " ".join(summary_sentences)
+    summary = "\n".join(summary_sentences)
 
     return summary
 
